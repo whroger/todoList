@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from .models import Todo
 from django.http import Http404
 from django.http import HttpResponse
-from datetime import datetime
+from datetime import datetime, date
 from django.utils.timezone import get_current_timezone
 
 
@@ -31,7 +31,9 @@ def add(request):
         title = request.POST['title']
         text = request.POST['text']
         priority = request.POST['priority']
-        todo = Todo(title=title, text=text, priority=priority)
+        deadlinea = request.POST['deadlinea']
+        #deadline = datetime.strftime(deadlinea,'d%/m%/Y%')
+        todo = Todo(title=title, text=text, priority=priority, deadline=deadlinea)
         todo.save()
 
         return redirect('/todos')

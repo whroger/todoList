@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from datetime import datetime
+from datetime import datetime, date
+import time
 
 from django.db import models
 
@@ -12,5 +13,6 @@ class Todo(models.Model):
     finished_at = models.DateTimeField(default=datetime.now(), blank=True)
     finished = models.BooleanField(default=False)
     priority = models.IntegerField(default=0)
+    deadline = models.DateField(default=date.today(), blank=True)
     def __str__(self): #this is to return the name of the object.
         return self.title

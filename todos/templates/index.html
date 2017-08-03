@@ -5,6 +5,7 @@
         {% for todo in todos %}
         <li>
             <a href="/todos/details/{{todo.id}}">{{todo.title}}</a>: {{todo.text}}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a class='edit' href="/todos/edit/{{todo.id}}">|Edit</a>
             <a class='delete' href="/todos/delete/{{todo.id}}">|Delete</a>
             <a class='finished' href="/todos/finished/{{todo.id}}">|Finished</a>
@@ -18,7 +19,7 @@
                <font color="black" class="importance">--Smooth</font>
             {% endif %}
             <br>
-            <font color="red" class="ddl_tag">Created at:{{todo.created_at}}</font>
+            <font color="red" class="ddl_tag">Deadline:{{todo.deadline}}</font>
         </li>
         {% endfor %}
     </ul>

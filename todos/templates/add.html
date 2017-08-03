@@ -7,6 +7,9 @@
         <label for="text">Text</label><br />
         <textarea name="text" id="text"></textarea>
         <br><br>
+        <label for="deadlinea">Deadline</label><br />
+        <input name="deadlinea" type="date" id="deadlinea">
+        <br><br>
         <label>Importance: </label>
         <label class="checkbox-inline">
           <input type="radio" name="priority" value='1' {% if not todo.priority or todo.priority == 1 %} checked {% endif %}><span class="btn btn-danger btn-xs">Urgent</span>
