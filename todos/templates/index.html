@@ -1,0 +1,43 @@
+{% include 'partials/header.html' %}
+<div class="todolist">
+    <h2>Todo Items:</h2>
+    <ul>
+        {% for todo in todos %}
+        <li>
+            <a href="/todos/details/{{todo.id}}">{{todo.title}}</a>: {{todo.text}}
+            <a class='edit' href="/todos/edit/{{todo.id}}">|Edit</a>
+            <a class='delete' href="/todos/delete/{{todo.id}}">|Delete</a>
+            <a class='finished' href="/todos/finished/{{todo.id}}">|Finished</a>
+            {% if todo.priority == 1 %}
+               <font color="red" class="importance">--Urgent</font>
+            {% endif %}
+            {% if todo.priority == 2 %}
+               <font color="blue" class="importance">--Caution</font>
+            {% endif %}
+            {% if todo.priority == 3 %}
+               <font color="black" class="importance">--Smooth</font>
+            {% endif %}
+            <br>
+            <font color="red" class="ddl_tag">Created at:{{todo.created_at}}</font>
+        </li>
+        {% endfor %}
+    </ul>
+    <hr>
+</div>
+
+<div class="finishedlist">
+    <h2>Finished Items:</h2>
+    <ul>
+        {% for todo in finishedtodos %}
+        <li>
+        <a href="/todos/details/{{todo.id}}">{{todo.title}}</a>: {{todo.text}}
+        <a class='edit' href="/todos/edit/{{todo.id}}">|Edit</a>
+        <a class='delete' href="/todos/delete/{{todo.id}}">|Delete</a>
+        <a class='finished' href="/todos/finished/{{todo.id}}">|Unfinished</a>
+        <br>
+        <font color="red" class="ddl_tag">Finished at: {{todo.finished_at}}</font>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% include 'partials/footer.html' %}

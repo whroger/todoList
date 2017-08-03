@@ -1,0 +1,22 @@
+a {
+  color: green;
+  text-decoration: none;
+}
+
+#main_header h1{
+  text-align: center;
+}
+
+#main_header a{
+  text-align: right;
+}
+
+.container{
+	margin: 0, auto;
+	width: 100%;
+	overflow: hidden;
+}
+
+.todolist, .finishedlist{
+    margin: 20px 10px;
+}
