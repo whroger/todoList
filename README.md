@@ -9,7 +9,7 @@ Delete a todo:
 ![delete_demo](https://user-images.githubusercontent.com/16737573/28950666-7db74620-78f8-11e7-8ade-9540ac5326b9.gif)
 
 Mark a todo as finished:
-
+![finished_demo](https://user-images.githubusercontent.com/16737573/28950789-51f7acae-78f9-11e7-96f4-ae07542f9b49.gif)
 
 Edit a todo content:
 
